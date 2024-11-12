@@ -305,7 +305,8 @@ app.get('/hotels/filter/category', (req, res) => {
 // Endpoint 7: Send all hotels
 //  /hotels
 app.get('/hotels', (req, res) => {
-  res.json(hotels);
+  let result = hotels
+  res.json({hotels:result });
 });
 
 app.listen(port, () => {
